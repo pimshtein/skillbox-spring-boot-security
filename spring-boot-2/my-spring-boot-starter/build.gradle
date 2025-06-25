@@ -1,0 +1,18 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'skillbox.springboot.demo'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+def springBootVersion = '2.7.18'
+
+dependencies {
+    api "org.springframework.boot:spring-boot-autoconfigure:${springBootVersion}"
+    implementation "org.springframework:spring-context"
+}
+
+repositories {
+    mavenCentral()
+} 

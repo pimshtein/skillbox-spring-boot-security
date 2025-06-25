@@ -1,0 +1,26 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.18'
+    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'java'
+}
+
+group = 'skillbox.springboot.demo'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+def myStarterVersion = '1.0-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'skillbox.springboot.demo:my-spring-boot-starter:' + myStarterVersion
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+} 
