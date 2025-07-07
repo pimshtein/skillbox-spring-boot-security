@@ -6,12 +6,13 @@ plugins {
 
 group = 'skillbox.springboot.demo'
 version = '1.0-SNAPSHOT'
-sourceCompatibility = '11'
 
 def myStarterVersion = '1.0-SNAPSHOT'
 
 repositories {
-    mavenLocal()
+    flatDir {
+        dirs '../my-spring-boot-starter/build/libs'
+    }
     mavenCentral()
 }
 
